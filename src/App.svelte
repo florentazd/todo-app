@@ -5,7 +5,7 @@
 </script>
 
 <section class="box">
-  <p class="heading">Mon TODO liste</p>
+  <p class="heading">ma TODO liste</p>
   <input
     placeholder="Ajouter un element"
     bind:value={element}
@@ -84,6 +84,7 @@
 
   section {
     min-height: 100vh;
+    max-height: 100vh;
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -92,7 +93,15 @@
     padding: 50px;
     margin: 0 auto;
     background-color: #f5f5f5;
+    overflow-y: scroll;
   }
+
+  @media screen and (max-width: 500px) {
+    section {
+      width: 100%;
+    }
+  }
+
   li {
     display: flex;
     align-items: center;
